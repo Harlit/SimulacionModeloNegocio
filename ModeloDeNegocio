@@ -1,0 +1,36 @@
+def hacer_encuesta_empresario():
+    print("Bienvenido a la encuesta sobre ser un buen empresario y la viabilidad de tu modelo de negocio.")
+    print("Por favor, responde las siguientes preguntas con 'S' (Sí) o 'N' (No).")
+
+    preguntas = [
+        "¿Estás dispuesto/a a asumir riesgos y tomar decisiones difíciles para hacer crecer tu negocio? (S/N): ",
+        "¿Tienes habilidades de liderazgo y capacidad para trabajar en equipo? (S/N): ",
+        "¿Eres creativo/a y puedes generar ideas innovadoras para tu negocio? (S/N): ",
+        "¿Estás dispuesto/a a aprender y adaptarte a los cambios del mercado? (S/N): ",
+        "¿Tienes un plan de negocio sólido y realista para tu emprendimiento? (S/N): ",
+        "¿Has investigado y comprendido bien el mercado y la competencia? (S/N): ",
+        "¿Estás dispuesto/a a invertir tiempo y esfuerzo para promocionar y vender tus productos/servicios? (S/N): ",
+        "¿Has identificado una necesidad real en el mercado para tu oferta? (S/N): ",
+        "¿Tienes acceso a los recursos financieros necesarios para iniciar tu negocio? (S/N): ",
+        "¿Estás comprometido/a a brindar un excelente servicio al cliente? (S/N): "
+    ]
+
+    respuestas = []
+
+    for pregunta in preguntas:
+        respuesta = input(pregunta).strip().upper()
+        respuestas.append(respuesta)
+
+    puntaje = respuestas.count("S")
+    total_preguntas = len(preguntas)
+    porcentaje_buen_empresario = (puntaje / total_preguntas) * 100
+
+    print("\n¡Gracias por completar la encuesta!")
+    print(f"Tu puntaje como potencial buen empresario es: {porcentaje_buen_empresario:.2f}%")
+
+    if porcentaje_buen_empresario >= 70:
+        print("Basado en tus respuestas, parece que podrías ser un buen empresario y tu modelo de negocio parece viable. ¡Felicidades!")
+    else:
+        print("Tus respuestas indican que podrías mejorar algunos aspectos para ser un mejor empresario o que tu modelo de negocio podría necesitar ajustes para ser más viable en el mercado.")
+
+hacer_encuesta_empresario()
