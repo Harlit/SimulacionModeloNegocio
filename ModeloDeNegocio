@@ -1,3 +1,6 @@
+#Link para ejecutar el codigo: https://www.online-python.com/
+
+
 def hacer_encuesta_empresario():
     print("Bienvenido a la encuesta sobre ser un buen empresario y la viabilidad de tu modelo de negocio.")
     print("Por favor, responde las siguientes preguntas con 'S' (Sí) o 'N' (No).")
